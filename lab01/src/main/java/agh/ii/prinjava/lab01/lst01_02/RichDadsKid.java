@@ -22,6 +22,7 @@ public class RichDadsKid extends RichDad {
 
     @Override
     protected void increaseWealth() {
+        fortune = fortune.add(BigDecimal.valueOf(2));
         // ... we'll do it my way
     }
 

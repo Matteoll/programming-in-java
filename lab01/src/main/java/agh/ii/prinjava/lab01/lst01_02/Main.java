@@ -2,7 +2,6 @@ package agh.ii.prinjava.lab01.lst01_02;
 
 import java.math.BigDecimal;
 import java.util.List;
-
 /**
  * Inheritance demo
  */

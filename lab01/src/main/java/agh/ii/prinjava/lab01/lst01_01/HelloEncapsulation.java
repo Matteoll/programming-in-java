@@ -1,5 +1,6 @@
 package agh.ii.prinjava.lab01.lst01_01;
 
+
 /**
  * Encapsulation is often referred to as one of the following:
  * <ul>
