@@ -2,12 +2,6 @@ package agh.ii.prinjava.proj1;
 
 import agh.ii.prinjava.proj1.impl.MyStackDLLBImpl;
 
-/**
- * My Stack - Abstract Data Type
- *
- * @param <E> The type of elements stored in the stack
- */
-
 public interface MyStack<E> {
 
     /**
@@ -15,7 +9,6 @@ public interface MyStack<E> {
      * @return the element removed from the top of the stack
      */
     E pop();
-
 
     /**
      * Push an element onto the top of the stack.
@@ -45,8 +38,6 @@ public interface MyStack<E> {
      * @return the element on top of stack
      */
     E peek();
-
-
 
     /**
      * Consider pros and cons of having a factory method in the interface

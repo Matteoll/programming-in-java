@@ -74,5 +74,4 @@ class MyQueueDLLBImplTest {
         System.out.println(queueOfInts.toString());
         assertEquals(queueOfInts.peek(), 44);
     }
-
 }

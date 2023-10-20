@@ -110,5 +110,4 @@ class DLinkListTest {
         dLinkList.addLast(3);
         System.out.println(dLinkList);
     }
-
 }

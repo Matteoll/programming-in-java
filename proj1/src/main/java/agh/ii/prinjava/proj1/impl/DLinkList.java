@@ -1,12 +1,10 @@
 package agh.ii.prinjava.proj1.impl;
 
-
 /**
  * Doubly-Linked List implementation
  * @param <E> the type of elements stored in the list
  */
 public class DLinkList<E> {
-    // ...
     private int numberOfElem;
     private Node<E> first;
     private Node<E> last;
@@ -191,4 +189,3 @@ public class DLinkList<E> {
         return last.elem;
     }
 }
-

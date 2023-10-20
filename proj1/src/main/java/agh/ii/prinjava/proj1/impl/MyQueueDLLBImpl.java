@@ -53,6 +53,4 @@ public class MyQueueDLLBImpl<E> implements MyQueue<E> {
     public String toString(){
         return elems.toString();
     }
-
-
 }

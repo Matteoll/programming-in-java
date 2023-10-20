@@ -2,7 +2,6 @@ package agh.ii.prinjava.proj1;
 
 import agh.ii.prinjava.proj1.impl.MyQueueDLLBImpl;
 
-
 /**
  * MyQueue - abstract data type
  *

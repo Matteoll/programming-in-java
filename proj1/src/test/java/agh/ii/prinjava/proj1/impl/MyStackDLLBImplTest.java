@@ -12,7 +12,6 @@ class MyStackDLLBImplTest {
 
     @BeforeEach
     void setUp() {
-
     }
 
     @AfterEach
