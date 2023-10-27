@@ -2,6 +2,7 @@ package agh.ii.prinjava.proj1.impl;
 
 /**
  * Doubly-Linked List implementation
+ *
  * @param <E> the type of elements stored in the list
  */
 public class DLinkList<E> {
@@ -11,18 +12,21 @@ public class DLinkList<E> {
 
     /**
      * Node class representing individual elements in the list
+     *
      * @param <T> the type of elements stored in the node
      */
     private static class Node<T> {
         T elem;
         Node<T> next;
         Node<T> prev;
-        public Node(T elem){
+
+        public Node(T elem) {
             this.elem = elem;
             next = null;
             prev = null;
         }
-        public Node(){
+
+        public Node() {
             this(null);
         }
     }
@@ -30,8 +34,8 @@ public class DLinkList<E> {
     /**
      * Custom exception for when trying to remove an element from an empty list
      */
-    public static class DLinkListEmptyException extends Exception{
-        public DLinkListEmptyException(String mess){
+    public static class DLinkListEmptyException extends Exception {
+        public DLinkListEmptyException(String mess) {
             super(mess);
         }
 
@@ -39,56 +43,60 @@ public class DLinkList<E> {
 
     /**
      * Add an element at the beginning of the list
+     *
      * @param elem the element that we add to the list
      */
-    public void addFirst(E elem){
-        Node<E> node= new Node<>(elem);
-        if (isEmpty()){
-            first =  node;
+    public void addFirst(E elem) {
+        Node<E> node = new Node<>(elem);
+        if (isEmpty()) {
+            first = node;
             last = node;
-            numberOfElem ++;
+            numberOfElem++;
             return;
         }
         Node<E> temp = first;
         temp.prev = node;
         node.next = temp;
         first = node;
-        numberOfElem ++;
+        numberOfElem++;
     }
 
     /**
      * Add an element at the end of the list
+     *
      * @param elem the element that we add to the list
      */
-    public void addLast(E elem){
+    public void addLast(E elem) {
         Node<E> node = new Node<>(elem);
-        if (isEmpty()){
-           first = node;
-           last = node;
-           numberOfElem ++;
-           return;
+        if (isEmpty()) {
+            first = node;
+            last = node;
+            numberOfElem++;
+            return;
         }
-        Node<E> temp =last;
+        Node<E> temp = last;
         node.prev = last;
         temp.next = node;
         last = node;
-        numberOfElem ++;
+        numberOfElem++;
     }
 
     /**
      * Remove and returns the first element of the list
+     *
      * @return the first element of the list
      */
-    public E removeFirst(){
+    public E removeFirst() {
         E res = null;
         try {
             if (isEmpty()) {
                 throw new DLinkListEmptyException("Cannot remove from an empty list !");
             }
             res = first.elem;
-            if(numberOfElem ==1){
+            if (numberOfElem == 1) {
                 first = null;
                 last = null;
+                numberOfElem = 0;
                 return res;
             }
             Node<E> temp = first.next;
@@ -97,7 +105,7 @@ public class DLinkList<E> {
             numberOfElem--;
 
 
-        }catch(DLinkListEmptyException e){
+        } catch (DLinkListEmptyException e) {
             System.out.println("Error : " + e.getMessage());
         }
         return res;
@@ -105,25 +113,27 @@ public class DLinkList<E> {
 
     /**
      * Remove and returns the last element of the list
+     *
      * @return the last element of the list
      */
-    public E removeLast(){
+    public E removeLast() {
         E res = null;
         try {
             if (isEmpty()) {
                 throw new DLinkListEmptyException("Cannot remove from an empty list !");
             }
             res = last.elem;
-            if (numberOfElem == 1){
+            if (numberOfElem == 1) {
                 first = null;
                 last = null;
+                numberOfElem = 0;
                 return res;
             }
             Node<E> temp = last.prev;
             temp.next = null;
             last = temp;
             numberOfElem--;
-        }catch(DLinkListEmptyException e){
+        } catch (DLinkListEmptyException e) {
             System.out.println("Error : " + e.getMessage());
         }
         return res;
@@ -131,9 +141,10 @@ public class DLinkList<E> {
 
     /**
      * Check if the list is empty
+     *
      * @return {@code true} if list is empty, {@code false} otherwise
      */
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return numberOfElem == 0;
     }
 
@@ -143,20 +154,20 @@ public class DLinkList<E> {
      * @return a string representation of the list
      */
     @Override
-    public String toString(){
+    public String toString() {
         String res = "";
         Node<E> temp = first;
-        if(isEmpty()){
+        if (isEmpty()) {
             res += "[NULL]";
         }
-        while (temp != null){
-            if(temp.prev == null){
+        while (temp != null) {
+            if (temp.prev == null) {
                 res += "[NULL]<-->";
             }
 
             res += "[@|" + temp.elem + "|@]<-->";
 
-            if(temp.next == null){
+            if (temp.next == null) {
                 res += "[NULL]";
             }
 
@@ -167,6 +178,7 @@ public class DLinkList<E> {
 
     /**
      * get the number of elements in a list
+     *
      * @return the number of element
      */
     public int getNumberOfElem() {
@@ -175,17 +187,19 @@ public class DLinkList<E> {
 
     /**
      * Return the first element of the list without removing it
+     *
      * @return the first element
      */
-    public E peekFirst(){
+    public E peekFirst() {
         return first.elem;
     }
 
     /**
      * Return the last element of the list without removing it
+     *
      * @return the last element
      */
-    public E peekLast(){
+    public E peekLast() {
         return last.elem;
     }
 }

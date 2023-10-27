@@ -23,9 +23,9 @@ class MyQueueDLLBImplTest {
      * We print the current queue.
      */
     @Test
-    void enqueueTest(){
+    void enqueueTest() {
         queueOfInts.enqueue(5);
-        System.out.println(queueOfInts.toString());
+        //System.out.println(queueOfInts.toString());
     }
 
     /**
@@ -36,12 +36,12 @@ class MyQueueDLLBImplTest {
      * We check if the dequeue value is 1.
      */
     @Test
-    void enqueueTest2(){
+    void enqueueTest2() {
         queueOfInts.enqueue(1);
-        System.out.println(queueOfInts.toString());
+        //System.out.println(queueOfInts.toString());
         queueOfInts.enqueue(2);
         queueOfInts.enqueue(3);
-        System.out.println(queueOfInts.toString());
+        //System.out.println(queueOfInts.toString());
         assertEquals(queueOfInts.dequeue(), 1);
     }
 
@@ -53,13 +53,13 @@ class MyQueueDLLBImplTest {
      * We check now if the last value to dequeue is 2.
      */
     @Test
-    void dequeueTest(){
+    void dequeueTest() {
         queueOfInts.enqueue(1);
         queueOfInts.enqueue(2);
-        System.out.println(queueOfInts.toString());
+        //System.out.println(queueOfInts.toString());
         queueOfInts.dequeue();
-        System.out.println(queueOfInts.toString());
-        assertEquals(queueOfInts.dequeue(),2);
+        //System.out.println(queueOfInts.toString());
+        assertEquals(queueOfInts.dequeue(), 2);
     }
 
     /**
@@ -68,10 +68,10 @@ class MyQueueDLLBImplTest {
      * We check if the last value of the queue is 44.
      */
     @Test
-    void peekTest(){
+    void peekTest() {
         queueOfInts.enqueue(44);
         queueOfInts.enqueue(216);
-        System.out.println(queueOfInts.toString());
+        //System.out.println(queueOfInts.toString());
         assertEquals(queueOfInts.peek(), 44);
     }
 }

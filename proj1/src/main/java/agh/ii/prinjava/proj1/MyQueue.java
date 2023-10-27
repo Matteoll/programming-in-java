@@ -18,12 +18,14 @@ public interface MyQueue<E> {
 
     /**
      * Removes and returns the element at the end of the queue
+     *
      * @return the element at the end of the queue
      */
     E dequeue();
 
     /**
      * Check if the queue is empty
+     *
      * @return {@code true} if the queue is empty, {@code false} otherwise
      */
     default boolean isEmpty() {
@@ -32,12 +34,14 @@ public interface MyQueue<E> {
 
     /**
      * returns the number of elements on the queue
+     *
      * @return the number of elements
      */
     int numOfElems();
 
     /**
      * return the element that is at the end of the queue without removing it
+     *
      * @return the element at the end of the queue
      */
     E peek();
@@ -46,8 +50,9 @@ public interface MyQueue<E> {
     /**
      * Consider pros and cons of having a factory method in the interface
      * factory method that create and return an instance of MyQueue
-     * @return an instance of MyQueue
+     *
      * @param <T> the type of the element stored in the instance of the queue
+     * @return an instance of MyQueue
      */
     static <T> MyQueue<T> create() {
         return new MyQueueDLLBImpl<>();

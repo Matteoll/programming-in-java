@@ -24,9 +24,9 @@ class DLinkListTest {
      * We check that our peekFirst take the value of the first element with an assert.
      */
     @Test
-    void addFirstTest(){
+    void addFirstTest() {
         dLinkList.addFirst(5);
-        System.out.println(dLinkList);
+        //System.out.println(dLinkList);
         assertEquals(dLinkList.peekFirst(), 5);
     }
 
@@ -38,11 +38,11 @@ class DLinkListTest {
      * We verify that the last element we had is 8 if so the function works.
      */
     @Test
-    void addLastTest(){
+    void addLastTest() {
         dLinkList.addFirst(5);
-        System.out.println(dLinkList);
+        //System.out.println(dLinkList);
         dLinkList.addLast(8);
-        System.out.println(dLinkList);
+        //System.out.println(dLinkList);
         assertEquals(dLinkList.peekLast(), 8);
     }
 
@@ -50,7 +50,7 @@ class DLinkListTest {
      * We make a test to see if our res is NULL and if our exception condition works with the message "Error : Cannot remove from an empty list !".
      */
     @Test
-    void removeFirstTest1(){
+    void removeFirstTest1() {
         assertNull(dLinkList.removeFirst());
     }
 
@@ -62,11 +62,11 @@ class DLinkListTest {
      * We check if when we removeFirst, 9 is the value of the removed value.
      */
     @Test
-    void removeFirstTest2(){
+    void removeFirstTest2() {
         dLinkList.addFirst(8);
-        System.out.println(dLinkList);
+        //System.out.println(dLinkList);
         dLinkList.addFirst(9);
-        System.out.println(dLinkList);
+        //System.out.println(dLinkList);
         assertEquals(dLinkList.removeFirst(), 9);
     }
 
@@ -77,11 +77,11 @@ class DLinkListTest {
      * We verify that when we remove the last the value of it, it's 8.
      */
     @Test
-    void removeLastTest1(){
-        System.out.println(dLinkList);
+    void removeLastTest1() {
+        //System.out.println(dLinkList);
         dLinkList.addFirst(8);
         dLinkList.addFirst(9);
-        System.out.println(dLinkList);
+        //System.out.println(dLinkList);
         assertEquals(dLinkList.removeLast(), 8);
     }
 
@@ -92,10 +92,10 @@ class DLinkListTest {
      * We verify that when we remove the last the value of it, it's 8.
      */
     @Test
-    void removeLastTest2(){
-        System.out.println(dLinkList);
+    void removeLastTest2() {
+        //System.out.println(dLinkList);
         dLinkList.addFirst(8);
-        System.out.println(dLinkList);
+        //System.out.println(dLinkList);
         assertEquals(dLinkList.removeLast(), 8);
     }
 
@@ -104,10 +104,10 @@ class DLinkListTest {
      * then we print to see if we obtain 1,2,3 in this order in the current list.
      */
     @Test
-    void toStringTest(){
+    void toStringTest() {
         dLinkList.addLast(1);
         dLinkList.addLast(2);
         dLinkList.addLast(3);
-        System.out.println(dLinkList);
+        //System.out.println(dLinkList);
     }
 }

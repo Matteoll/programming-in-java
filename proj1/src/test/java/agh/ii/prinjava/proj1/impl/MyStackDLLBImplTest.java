@@ -23,10 +23,10 @@ class MyStackDLLBImplTest {
      * We print the current stack.
      */
     @Test
-    void pushTest(){
+    void pushTest() {
         stackOfInts.push(5);
-        System.out.println(stackOfInts.toString());
-   }
+        //System.out.println(stackOfInts.toString());
+    }
 
     /**
      * We add 1 to the current stack,
@@ -35,15 +35,15 @@ class MyStackDLLBImplTest {
      * We print the new stack to affirm changes,
      * We check if the pop value is 3.
      */
-   @Test
-    void pushTest2(){
+    @Test
+    void pushTest2() {
         stackOfInts.push(1);
-        System.out.println(stackOfInts.toString());
+        //System.out.println(stackOfInts.toString());
         stackOfInts.push(2);
         stackOfInts.push(3);
-        System.out.println(stackOfInts.toString());
+        //System.out.println(stackOfInts.toString());
         assertEquals(stackOfInts.pop(), 3);
-   }
+    }
 
     /**
      * We add 1 and 2 to the current stack,
@@ -52,26 +52,26 @@ class MyStackDLLBImplTest {
      * We print the current stack and watch if the value has been removed,
      * We check now if the first value to pop is 1.
      */
-   @Test
-    void popTest(){
-       stackOfInts.push(1);
-       stackOfInts.push(2);
-       System.out.println(stackOfInts.toString());
-       stackOfInts.pop();
-       System.out.println(stackOfInts.toString());
-       assertEquals(stackOfInts.pop(),1);
-   }
+    @Test
+    void popTest() {
+        stackOfInts.push(1);
+        stackOfInts.push(2);
+        //System.out.println(stackOfInts.toString());
+        stackOfInts.pop();
+        //System.out.println(stackOfInts.toString());
+        assertEquals(stackOfInts.pop(), 1);
+    }
 
     /**
      * We add 42 and 213,
      * We print the current stack,
      * We check if the last value of the stack is 44.
      */
-   @Test
-    void peekTest(){
+    @Test
+    void peekTest() {
         stackOfInts.push(42);
         stackOfInts.push(213);
-        System.out.println(stackOfInts.toString());
+        //System.out.println(stackOfInts.toString());
         assertEquals(stackOfInts.peek(), 213);
-   }
+    }
 }
